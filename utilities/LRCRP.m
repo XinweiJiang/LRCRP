@@ -2,8 +2,7 @@ function [ d_train_x,d_test_x] = LRCRP(train_x,test_x,options,maxDim)
 %   train_x, each column is a data point;
 %   options.lamuda and options.beta is a paramators,
 %   type is zhe demension reduction type,it is LRCRP1(use I) or LRCRP2(use noI)
-%UNTITLED3 此处显示有关此函数的摘要
-%   此处显示详细说明
+
 %---------------calculate W-------------------------%
 addpath('./utilities');
 W=creatgraphW(train_x,options); 
