@@ -17,7 +17,7 @@ function G = constructW_2(X,k,sigma)
     end
     
     % Construct neighborhood graph
-    %disp('Constructing neighborhood graph...');%构造图
+    %disp('Constructing neighborhood graph...');%construct graph
     if size(X, 1) < 4000
         G = L2_distance(X', X');%compute L2 distance
         % Compute neighbourhood graph exm  [1,1;2,2],return
@@ -38,4 +38,4 @@ function G = constructW_2(X,k,sigma)
    % disp('Computing weight matrices...');
     
     % Compute Gaussian kernel (heat kernel-based weights)
-    G(G ~= 0) = exp(-G(G ~= 0) / (2 * sigma ^ 2));%热核函数
+    G(G ~= 0) = exp(-G(G ~= 0) / (2 * sigma ^ 2));%heat kernel function
