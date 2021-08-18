@@ -26,11 +26,11 @@ y=reshape(y,Dim(1)*Dim(2),1);
 xClean = sgpNormalize( xClean);
 x = sgpNormalize( x);
 
- %取数据
-y_training=[];%训练样本的标签
-x_training=[];%训练样本
-y_testing=[];%测试样本的标签
-x_testing=[];%测试样本
+ %
+y_training=[];%
+x_training=[];%
+y_testing=[];%
+x_testing=[];%
 index_training=[];
 index_testing=[];
 nMaxPercent = 0.6;      %max percentage of data chosen from each class
@@ -79,7 +79,7 @@ y_testing = y(index_testing,:);
 
  clear x y x_clean;
  
- % 将标签置为连续离散值
+ % 
 if nClass == 2
     y_training(y_training==1) = -1; y_training(y_training==2) = 1;
     y_test(y_test==1) = -1; y_test(y_test==2) = 1;
