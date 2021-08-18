@@ -17,14 +17,14 @@ function G = constructW_2(X,k,sigma)
     end
     
     % Construct neighborhood graph
-    %disp('Constructing neighborhood graph...');%构造图
+    %disp('Constructing neighborhood graph...');%鏋勯�犲浘
     if size(X, 1) < 4000
-        G = L2_distance(X', X');%计算与其他点的距离
+        G = L2_distance(X', X');%compute L2 distance
         % Compute neighbourhood graph exm  [1,1;2,2],return
         % [0,1.412;1.412,0];
         [tmp, ind] = sort(G); 
         for i=1:size(G, 1)
-            G(i, ind((2 + k):end, i)) = 0; %选出k邻近，其余点都赋予0
+            G(i, ind((2 + k):end, i)) = 0; %choose k-nn
         end
         G = sparse(double(G));
         G = max(G, G');             % Make sure distance matrix is symmetric
@@ -38,4 +38,4 @@ function G = constructW_2(X,k,sigma)
    % disp('Computing weight matrices...');
     
     % Compute Gaussian kernel (heat kernel-based weights)
-    G(G ~= 0) = exp(-G(G ~= 0) / (2 * sigma ^ 2));%热核函数
+    G(G ~= 0) = exp(-G(G ~= 0) / (2 * sigma ^ 2));%鐑牳鍑芥暟
