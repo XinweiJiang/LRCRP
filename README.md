@@ -2,10 +2,10 @@
 Code for the paper 'Unsupervised Dimensionality Reduction for Hyperspectral Imagery via Laplacian Regularized Collaborative Representation Projection' in IEEE GRSL.
 
 ```
-@article{zhang2021s3pca,
-  title={Spectral-Spatial and Superpixelwise PCA for Unsupervised Feature Extraction of Hyperspectral Imagery},
-  author={Xin Zhang and Xinwei Jiang and Junjun Jiang and Yongshan Zhang and Xiaobo Liu and Zhihua Cai},
-  journal={IEEE Transactions on Geoscience and Remote Sensing},
+@article{jiang2021lrcrp,
+  title={Unsupervised Dimensionality Reduction for Hyperspectral Imagery via Laplacian Regularized Collaborative Representation Projection},
+  author={Xinwei Jiang, Liwen Xiong, Qin Yan, Yongshan Zhang, Xiaobo Liu and Zhihua Cai},
+  journal={IEEE Geoscience and Remote Sensing Letters},
   volume={19},
   pages={1-5},
   year={2022},
